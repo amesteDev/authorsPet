@@ -15,8 +15,8 @@ const UserSchema = new mongoose.Schema({
         required: true
     }
 }, {
-    collection: 'user'
+    collection: 'users'
 });
 
-const User = mongoose.model("meeting", UserSchema);
+const User = mongoose.model("User", UserSchema);
 module.exports = User;
