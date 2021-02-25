@@ -1,12 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-app.use(express.json());
 const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
-
-//import routes
+const bodyParser = require('body-parser')
+    //import routes
 const login = require('./routes/login');
+
+// Mongoose connection
+mongoose.connect(process.env.DB_STRING, { useUnifiedTopology: true, useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/static/'));
 app.get(/.*/, (req, res) => res.sendFile(__dirname + '/static/index.html'));
