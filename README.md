@@ -16,10 +16,10 @@ PK=*INSERT_YOUR_PRIVATE_KEY*
 ```
 ## File structure
 
-/models - contains the mongoose Schemas
-/routes - routes for calling the api
-/static - frontend files
-/index.js - entry point for node.js
+/models - contains the mongoose Schemas\
+/routes - routes for calling the api\
+/static - frontend files\
+/index.js - entry point for node.js\
 
 
 ## License
