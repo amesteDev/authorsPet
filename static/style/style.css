@@ -120,3 +120,20 @@ form .button {
     height: 50px;
     width: 100%;
 }
+
+.portal-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portal-header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+.control-outer {
+    background-color: rgba(255, 255, 255, 0.76);
+    display: grid;
+    grid-template-columns: 15% 65%;
+}

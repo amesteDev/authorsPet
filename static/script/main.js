@@ -20,12 +20,17 @@ loginForm.addEventListener('submit', (event) => {
         })
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             localStorage.setItem('token', data.token);
             localStorage.setItem('username', data.username);
-            window.location.replace('/signedin.html');
         })
         .catch(err => {
             // VISA FELSIDA HÄR
             console.log(err);
         });
 })
+
+
+const loginError = (msg) => {
+
+}
